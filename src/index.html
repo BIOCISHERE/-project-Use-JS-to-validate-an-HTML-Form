@@ -1,29 +1,368 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hello Rigo with Vanilla.js</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
-      integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
-    <link rel="shortcut icon" href="./4geeks.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
   </head>
+
   <body>
-    <div class="container-fluid text-center">
-      <h1 class="mt-5">Hello Rigo!</h1>
-      <img src="./rigo-baby.jpg" />
-      <p class="alert alert-warning mt-4">
-        If this text is <b>not</b> centered and <b>yellow</b>, you probably have
-        an error
-      </p>
-      <div class="fixed-bottom p-4">
-        Made with ❤️ by
-        <a href="https://www.4geeksacademy.com">4Geeks Academy</a>
+    <div class="container">
+      <!--inicio container-->
+      <div class="row">
+        <!--inicio row-->
+        <div class="col">
+          <!--inicio col-->
+          <form>
+            <div class="card m-3">
+              <!--INICIO DE CARD-->
+              <div class="card-header m-1">
+                <!--HECHO inicio de titulo-->
+                <h3>Payment Form Example</h3>
+              </div>
+              <!--HECHO final de titulo-->
+              <div class="card-body">
+                <!--inicio de card body-->
+                <div class="alert alert-danger" role="alert">
+                  <i class="bi bi-exclamation-circle-fill"></i
+                  ><span class="m-1">Some fields are missing</span>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-5">
+                      <label for="inputcard" class="form-label">Card #:</label
+                      ><br />
+                      <input
+                        type="text"
+                        name="inputcard"
+                        id="inputcard"
+                        value=""
+                        placeholder="xxxx-xxxx-xxxx-xxxx"
+                        class=" form-control w-100"
+                      />
+                      <span class="invalid-feedback error-inputcard"
+                        >Error</span
+                      >
+                      <span class="valid-feedback">Valid card</span>
+                    </div>
+                    <div class="col-3">
+                      <label for="inputcvc" class="form-label">CVC #:</label>
+                      <br />
+                      <input
+                        type="text"
+                        name="inputcvc"
+                        id="inputcvc"
+                        value=""
+                        placeholder="xxx"
+                        class="form-control w-100"
+                      /><span class="invalid-feedback error-inputcvc"
+                        >Error</span
+                      >
+                      <span class="valid-feedback">Valid cvc</span>
+                    </div>
+                    <div class="col-4 justify-content-center">
+                      <label for="inputamount" class="form-label"
+                        >Amount:</label
+                      >
+                      <br />
+                      <div class="container">
+                        <div class="row">
+                          <div class="col-1 p-0 m-0">
+                            <i class="bi bi-currency-dollar"></i>
+                          </div>
+                          <div class="col-11 p-0 m-0">
+                            <input
+                              type="text"
+                              name="inputamount"
+                              id="inputamount"
+                              value=""
+                              placeholder="amount"
+                              class="form-control w-100"
+                            /><span class="invalid-feedback error-inputamount"
+                              >Error</span
+                            >
+                            <span class="valid-feedback">Valid amount</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-6">
+                      <div class="container m-0 p-0">
+                        <div class="row mb-2">
+                          <div class="col-12">
+                            <label for="inputfname" class="form-label"
+                              >First Name:</label
+                            ><br />
+                            <input
+                              type="text"
+                              name="inputfname"
+                              id="inputfname"
+                              value=""
+                              placeholder="Type your first name"
+                              class="form-control w-100"
+                            /><span class="invalid-feedback error-inputfname"
+                              >Error</span
+                            >
+                            <span class="valid-feedback">Valid name</span>
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-12">
+                            <label for="inputcity" class="form-label"
+                              >City:</label
+                            >
+                            <input
+                              type="text"
+                              name="inputcity"
+                              id="inputcity"
+                              value=""
+                              placeholder="Type your city"
+                              class="form-control w-100"
+                            /><span class="invalid-feedback error-inputcity"
+                              >Error</span
+                            >
+                            <span class="valid-feedback">Valid city(USA)</span>
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-6">
+                            <label for="methodpay">We accept:</label>
+                            <div class="container m-0 p-0 bg-secondary rounded">
+                              <div class="row">
+                                <div class="col-12 m-1 text-center">
+                                  <input
+                                    type="radio"
+                                    name="methodpay"
+                                    id="mastercard"
+                                    value="Mastercard"
+                                    class="m-1"
+                                    checked
+                                  /><i
+                                    class="fa-brands fa-cc-mastercard"
+                                    style="font-size: 24px;"
+                                  ></i>
+                                  <input
+                                    type="radio"
+                                    name="methodpay"
+                                    id="visa"
+                                    value="Visa"
+                                    class="m-1"
+                                  /><i
+                                    class="fa-brands fa-cc-visa"
+                                    style="font-size: 24px;"
+                                  ></i>
+                                  <input
+                                    type="radio"
+                                    name="methodpay"
+                                    id="dinersclub"
+                                    value="Dinersclub"
+                                    class="m-1"
+                                  /><i
+                                    class="fa-brands fa-cc-diners-club"
+                                    style="font-size: 24px;"
+                                  ></i>
+                                  <input
+                                    type="radio"
+                                    name="methodpay"
+                                    id="amex"
+                                    value="Amex"
+                                    class="m-1"
+                                  /><i
+                                    class="fa-brands fa-cc-amex"
+                                    style="font-size: 24px;"
+                                  ></i>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-6">
+                      <div class="container m-0 p-0">
+                        <div class="row mb-2">
+                          <div class="col-12">
+                            <label for="inputlname" class="form-label"
+                              >Last Name:</label
+                            >
+                            <input
+                              type="text"
+                              name="inputlname"
+                              id="inputlname"
+                              value=""
+                              placeholder="Type your last name"
+                              class="form-control w-100"
+                            /><span class="invalid-feedback error-inputlname"
+                              >Error</span
+                            >
+                            <span class="valid-feedback">Valid last name</span>
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-6">
+                            <label for="inputwstate" class="form-label"
+                              >State</label
+                            >
+                            <select
+                              name="inputwstate"
+                              id="inputwstate"
+                              class="form-select"
+                            >
+                              <span
+                                class="invalid-feedback"
+                                id="spaninputwstate"
+                                >Error</span
+                              >
+                              <span class="valid-feedback">Valid state</span>
+                              <option value="select state">select state</option>
+                              <option value="Alabama">Alabama</option>
+                              <option value="Alaska">Alaska</option>
+                              <option value="Arizona">Arizona</option>
+                              <option value="Arkansas">Arkansas</option>
+                              <option value="California">California</option>
+                              <option value="Colorado">Colorado</option>
+                              <option value="Connecticut">Connecticut</option>
+                              <option value="Delaware">Delaware</option>
+                              <option value="Florida">Florida</option>
+                              <option value="Georgia">Georgia</option>
+                              <option value="Hawaii">Hawaii</option>
+                              <option value="Idaho">Idaho</option>
+                              <option value="Illinois">Illinois</option>
+                              <option value="Indiana">Indiana</option>
+                              <option value="Iowa">Iowa</option>
+                              <option value="Kansas">Kansas</option>
+                              <option value="Kentucky">Kentucky</option>
+                              <option value="Louisiana">Louisiana</option>
+                              <option value="Maine">Maine</option>
+                              <option value="Maryland">Maryland</option>
+                              <option value="Massachusetts"
+                                >Massachusetts</option
+                              >
+                              <option value="Michigan">Michigan</option>
+                              <option value="Minnesota">Minnesota</option>
+                              <option value="Mississippi">Mississippi</option>
+                              <option value="Missouri">Missouri</option>
+                              <option value="Montana">Montana</option>
+                              <option value="Nebraska">Nebraska</option>
+                              <option value="Nevada">Nevada</option>
+                              <option value="New Hampshire"
+                                >New Hampshire</option
+                              >
+                              <option value="New Jersey">New Jersey</option>
+                              <option value="New Mexico">New Mexico</option>
+                              <option value="New York">New York</option>
+                              <option value="North Carolina"
+                                >North Carolina</option
+                              >
+                              <option value="North Dakota">North Dakota</option>
+                              <option value="Ohio">Ohio</option>
+                              <option value="Oklahoma">Oklahoma</option>
+                              <option value="Oregon">Oregon</option>
+                              <option value="Pennsylvania">Pennsylvania</option>
+                              <option value="Rhode Island">Rhode Island</option>
+                              <option value="South Carolina"
+                                >South Carolina</option
+                              >
+                              <option value="South Dakota">South Dakota</option>
+                              <option value="Tennessee">Tennessee</option>
+                              <option value="Texas">Texas</option>
+                              <option value="Utah">Utah</option>
+                              <option value="Vermont">Vermont</option>
+                              <option value="Virginia">Virginia</option>
+                              <option value="Washington">Washington</option>
+                              <option value="West Virginia"
+                                >West Virginia</option
+                              >
+                              <option value="Wisconsin">Wisconsin</option>
+                              <option value="Wyoming">Wyoming</option>
+                            </select>
+                          </div>
+                          <div class="col-6">
+                            <label for="inputpostcode" class="form-label"
+                              >Postal code:</label
+                            >
+                            <input
+                              type="text"
+                              name="inputpostcode"
+                              id="inputpostcode"
+                              value=""
+                              placeholder="xxxxx"
+                              class="form-control w-100"
+                            /><span class="invalid-feedback error-inputpostcode"
+                              >Error</span
+                            >
+                            <span class="valid-feedback"
+                              >Valid postal code</span
+                            >
+                          </div>
+                        </div>
+                        <div class="row mb-2">
+                          <div class="col-12">
+                            <label for="inputmessage" class="form-label"
+                              >Message:</label
+                            >
+                            <textarea
+                              name="inputmessage"
+                              id="inputmessage"
+                              cols="56"
+                              rows="3"
+                              placeholder="Type message"
+                              class="form-control"
+                            ></textarea
+                            ><span class="invalid-feedback error-inputmessage"
+                              >Error</span
+                            >
+                            <span class="valid-feedback">Valid message</span>
+                            <small class="text-muted">Add any notes here</small>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--final de card body-->
+              <div class="card-footer text-end">
+                <!--HECHO inicio botones-->
+                <input type="reset" value="reset" class="btn btn-secondary" />
+                <input type="submit" value="submit" class="btn btn-primary" />
+              </div>
+              <!--HECHO final botones-->
+            </div>
+            <!--FINAL DE CARD-->
+          </form>
+        </div>
+        <!--final col-->
       </div>
+      <!--final row-->
     </div>
+    <!--final container-->
+    <!----------------------------------------DO NOT CHANGE BELOW THIS---------------------------------------->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
