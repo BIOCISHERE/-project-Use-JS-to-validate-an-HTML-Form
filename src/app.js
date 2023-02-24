@@ -9,10 +9,6 @@ let isCity = /^[A-Za-z\s]{3,}$/;
 let isPostal = /^[0-9]{4,9}$/;
 let isMessage = /^[A-Za-z,.?\s]{1,}$/;
 
-window.onload = function() {
-  alert.style.display = "none";
-};
-
 form.addEventListener("submit", evento => {
   evento.preventDefault();
 
@@ -49,13 +45,15 @@ form.addEventListener("submit", evento => {
     card.classList.add("is-invalid");
     card.classList.remove("is-valid");
     errCard.innerHTML = "Must not be empty";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else if (!creditCard.test(card.value)) {
     send = false;
     card.classList.add("is-invalid");
     card.classList.remove("is-valid");
     errCard.innerHTML = "Must be a valid credit card (only numbers please)";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else {
     card.classList.remove("is-invalid");
     card.classList.add("is-valid");
@@ -65,13 +63,15 @@ form.addEventListener("submit", evento => {
     cvc.classList.add("is-invalid");
     cvc.classList.remove("is-valid");
     errCvc.innerHTML = "Must not be empty";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else if (!isCVC.test(cvc.value)) {
     send = false;
     cvc.classList.add("is-invalid");
     cvc.classList.remove("is-valid");
     errCvc.innerHTML = "Must be a valid cvc";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else {
     cvc.classList.remove("is-invalid");
     cvc.classList.add("is-valid");
@@ -81,13 +81,15 @@ form.addEventListener("submit", evento => {
     amount.classList.add("is-invalid");
     amount.classList.remove("is-valid");
     erramount.innerHTML = "Must not be empty, min amount $1";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else if (!isAmount.test(amount.value)) {
     send = false;
     amount.classList.add("is-invalid");
     amount.classList.remove("is-valid");
     erramount.innerHTML = "Only numbers, min $1";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else {
     amount.classList.remove("is-invalid");
     amount.classList.add("is-valid");
@@ -97,13 +99,15 @@ form.addEventListener("submit", evento => {
     fName.classList.add("is-invalid");
     fName.classList.remove("is-valid");
     errFName.innerHTML = "Must not be empty";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else if (!isFirstName.test(fName.value)) {
     send = false;
     fName.classList.add("is-invalid");
     fName.classList.remove("is-valid");
     errFName.innerHTML = "Must be a valid name";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else {
     fName.classList.remove("is-invalid");
     fName.classList.add("is-valid");
@@ -113,13 +117,15 @@ form.addEventListener("submit", evento => {
     lName.classList.add("is-invalid");
     lName.classList.remove("is-valid");
     errLName.innerHTML = "Must not be empty";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else if (!islastName.test(lName.value)) {
     send = false;
     lName.classList.add("is-invalid");
     lName.classList.remove("is-valid");
     errLName.innerHTML = "Must be a valid last name";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else {
     lName.classList.remove("is-invalid");
     lName.classList.add("is-valid");
@@ -129,13 +135,15 @@ form.addEventListener("submit", evento => {
     city.classList.add("is-invalid");
     city.classList.remove("is-valid");
     errCity.innerHTML = "Must not be empty";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else if (!isCity.test(city.value)) {
     send = false;
     city.classList.add("is-invalid");
     city.classList.remove("is-valid");
     errCity.innerHTML = "Must be a valid city(USA)";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else {
     city.classList.remove("is-invalid");
     city.classList.add("is-valid");
@@ -144,7 +152,8 @@ form.addEventListener("submit", evento => {
     send = false;
     state.classList.add("is-invalid");
     state.classList.remove("is-valid");
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else {
     state.classList.remove("is-invalid");
     state.classList.add("is-valid");
@@ -154,13 +163,15 @@ form.addEventListener("submit", evento => {
     postcode.classList.add("is-invalid");
     postcode.classList.remove("is-valid");
     errPostCode.innerHTML = "Must not be empty";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else if (!isPostal.test(postcode.value)) {
     send = false;
     postcode.classList.add("is-invalid");
     postcode.classList.remove("is-valid");
     errPostCode.innerHTML = "Must be a valid postcode";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else {
     postcode.classList.remove("is-invalid");
     postcode.classList.add("is-valid");
@@ -170,20 +181,23 @@ form.addEventListener("submit", evento => {
     message.classList.add("is-invalid");
     message.classList.remove("is-valid");
     errMessage.innerHTML = "Must not be empty";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else if (!isMessage.test(message.value)) {
     send = false;
     message.classList.add("is-invalid");
     message.classList.remove("is-valid");
     errMessage.innerHTML =
       "Only periods ,comma, question marks, spaces and letters please";
-    alert.style.display = "block";
+    alert.classList.remove("d-none");
+    alert.classList.add("d-block");
   } else {
     message.classList.remove("is-invalid");
     message.classList.add("is-valid");
   }
   if (send) {
-    alert.style.display = "none";
+    alert.classList.remove("d-block");
+    alert.classList.add("d-none");
     form.submit();
   }
 });
