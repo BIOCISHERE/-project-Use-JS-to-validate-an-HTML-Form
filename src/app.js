@@ -1,6 +1,6 @@
 let form = document.querySelector("form");
 let creditCard = /^[0-9]{13,16}$/;
-let isCVC = /^[0-9]{3}$/;
+let isCVC = /^[0-9]{3,4}$/;
 let isAmount = /^[0-9]{1,}$/;
 let isFirstName = /^[A-Za-z]{3,}$/;
 let islastName = /^[A-Za-z]{3,}$/;
