@@ -4,9 +4,9 @@ let isCVC = /^[0-9]{3}$/;
 let isAmount = /^[0-9]{1,}$/;
 let isFirstName = /^[A-Za-z]{3,}$/;
 let islastName = /^[A-Za-z]{3,}$/;
-let isCity = /^[A-Za-z ]{3,}$/;
+let isCity = /^[A-Za-z\s]{3,}$/;
 let isPostal = /^[0-9]{4,9}$/;
-let isMessage = /^[A-Za-z,.? ]{1,}$/;
+let isMessage = /^[A-Za-z,.?\s]{1,}$/;
 
 form.addEventListener("submit", evento => {
   evento.preventDefault();
